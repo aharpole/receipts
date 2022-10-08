@@ -29,7 +29,7 @@ My Hazel setup looks like this (the `2>` part of my command is just logging erro
 
 I built this on Ruby 2.7.1 but this should work on any modern Ruby.
 
-If you're on a Mac, use a tool like `rbenv` or `rvm` to install a Ruby; don't rely on the system Ruby. 
+If you're on a Mac, use a tool like `rbenv` or `rvm` to install a Ruby; don't rely on the system Ruby.
 
 If you're on Windows I can't help you because I've never run any Ruby applications on Windows, but you should still be able to use Receipts!
 
@@ -41,6 +41,20 @@ The basic commands you'll want to use:
 - `bin/rake db:create db:migrate db:seed`
 
 At this point, the app is set up.
+
+### API key
+
+You'll need to [sign up for a Twitter API key](https://developer.twitter.com/en/portal/petition/essential/basic-info).
+
+Run `bin/rails credentials:edit` and set up the YML file so that you have a `twitter` section that looks like this:
+
+```yml
+twitter:
+  consumer_key: XXX
+  consumer_secret: XXX
+  access_token: XXX
+  access_token_secret:XXX
+```
 
 To import tweets, you run `bin/rake import_from_file path/to/tweet.txt`
 
