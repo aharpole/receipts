@@ -53,7 +53,7 @@ twitter:
   consumer_key: XXX
   consumer_secret: XXX
   access_token: XXX
-  access_token_secret:XXX
+  access_token_secret: XXX
 ```
 
 To import tweets, you run `bin/rake import_from_file path/to/tweet.txt`
